@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Valutaomvandlare</title>
-</head>
-<body>
+    <script src="js/api.js"></script>
+    <script src="js/function.js"></script>
+ </head>
+
+   <body>
+
+      <h2>Valutaomvandlaren</h2>
+
+      <select id="fromValue"></select>
+  
+      <select id="toValue"></select>
+      <br>
+      <input type="text" id="fromAmount">
+      <button id="buyButton" onclick="buyCurrency()">Köp</button>
+<br/>
+      <label id="toAmount"></label>
 
 
+        <script>
+          getCurrencies();
+        </script>
     
-</body>
+  </body>
+
 </html>
