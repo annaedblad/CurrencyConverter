@@ -6,28 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Valutaomvandlare</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/api.js"></script>
     <script src="js/function.js"></script>
+
  </head>
-
    <body>
+      <h1>VALUTAOMVANDLARE</h1>
 
-      <h2>Valutaomvandlaren</h2>
+      <div class="tradeView">
 
-      <select id="fromValue"></select>
+        <label class="divHeadText">Från valuta</label>
+        <select id="fromValue"></select>
   
-      <select id="toValue"></select>
-      <br>
-      <input type="text" id="fromAmount">
-      <button id="buyButton" onclick="buyCurrency()">Köp</button>
-<br/>
-      <label id="toAmount"></label>
+        <label class="divHeadText">Till valuta</label>
+        <select id="toValue"></select>
+        <br> <br>
 
+        <label class="divHeadText">Belopp</label>
+        <input type="text" id="fromAmount">
+        <button class="buttonStyle" id="buyButton" onclick="tradeCurrencies.buy()">Köp</button>
+        <button class="buttonStyle" id="sellButton" onclick="tradeCurrencies.sell()">Sälj</button>
+        <br/> <br>
+        <label class="resultText" id="toAmount"></label>
+      </div>
+
+      <img src="images/pic9.jpg" class="fix"/>
 
         <script>
           getCurrencies();
         </script>
     
+  
   </body>
-
 </html>
